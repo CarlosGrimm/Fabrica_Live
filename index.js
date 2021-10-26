@@ -58,8 +58,11 @@ app.put('/mensagens/:id', (req, res) => {
 });
 
 //- [DELETE] /mensagens/{id} - Remover uma mensagem pelo ID                  
-app.get('/mensagens', (req, res) => {
-  res.send(mensagens)
+app.delete('/mensagens/:id', (req, res) => {
+  const id = req.params.id - 1;
+  const mensagem = mensagens[id];
+  mensagens.splice(id, 1);
+  res.send(`Mensagem removida com sucesso: '${mensagem}'.`);
 });
 
 app.listen(port);

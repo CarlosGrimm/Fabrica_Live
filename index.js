@@ -1,7 +1,13 @@
 const express = require('express');
+
 const app = express();
 
-const port = 3000
+const port = 3000;
+
+app.use(express.json());
+app.use(express.urlencoded({
+  extended: true
+}));
 
 app.get('/', (req, res) => {
   res.send('Hello World');
@@ -37,13 +43,18 @@ app.get('/mensagens/:id', (req, res) => {
 
 
 //- [POST] /mensagens - Cria uma nova mensagem
-app.get('/mensagens', (req, res) => {
-  res.send(mensagens)
+app.post('/mensagens', (req, res) => {
+  const mensagem = req.body.mensagem;
+  mensagens.push[mensagem];
+  res.send(`Mensagem criada com sucesso: '${mensagem}'.`);
 });
 
 //- [PUT] /mensagens/{id} - Atualiza uma mensagem pelo ID
-app.get('/mensagens', (req, res) => {
-  res.send(mensagens)
+app.put('/mensagens/:id', (req, res) => {
+  const id = req.params.id;
+  const mensagem = req.body.mensagem;
+  mensagens[id] = mensagem;
+  res.send(`Mensagem alterada com sucesso: '${mensagem}'.`);
 });
 
 //- [DELETE] /mensagens/{id} - Remover uma mensagem pelo ID                  

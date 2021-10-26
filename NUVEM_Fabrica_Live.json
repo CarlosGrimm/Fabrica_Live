@@ -1,0 +1,14 @@
+{
+	"id": "ca5d8659-85ed-4d44-89a0-cdcd2ea75411",
+	"name": "NUVEM_Fabrica_Live",
+	"values": [
+		{
+			"key": "API_URL",
+			"value": "https://api.fabrica_live.com",
+			"enabled": true
+		}
+	],
+	"_postman_variable_scope": "environment",
+	"_postman_exported_at": "2021-10-26T15:46:49.810Z",
+	"_postman_exported_using": "Postman/9.1.1"
+}

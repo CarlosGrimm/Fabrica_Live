@@ -1,0 +1,144 @@
+{
+	"info": {
+		"_postman_id": "14a0bf8a-934b-440e-9d6f-f883316adc7b",
+		"name": "Fabrica_Live",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Ler Hello World",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000",
+					"host": [
+						"localhost"
+					],
+					"port": "3000"
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Ler todas as mensagens.",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/mensagens",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"mensagens"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Deletar a mensagem pelo ID.",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"mensagem\": \"Teste de atualização de mensagem no body da requisição\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/mensagens/1",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"mensagens",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Alterar a mensagem pelo ID.",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"mensagem\": \"Teste de atualização de mensagem no body da requisição\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/mensagens/1",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"mensagens",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Criar nova mensagem.",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"mensagem\": \"Teste de mensagem no body da requisição\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/mensagens",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"mensagens"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Ler a mensagem pelo ID.",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/mensagens/1",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"mensagens",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
